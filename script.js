@@ -1,5 +1,5 @@
 
-function books(title,author){
+function Books(title,author){
     this.title = title;
     this.author = author;
 }
@@ -32,3 +32,11 @@ class storage {
         localStorage.setItem('booList',JSON.stringify(bookList));
     }
 }
+
+const form = document.querySelector('booksinput')
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const title = document.querySelector('.title').value
+    const author = document.querySelector('.author').value
+    const book = new Books(title, author)
+})
