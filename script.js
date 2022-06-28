@@ -5,7 +5,7 @@ function Books(title, author) {
 
 function getBooks() {
   let bookList;
-  if(JSON.parse(localStorage.getItem('bookList')===null)) {
+  if (JSON.parse(localStorage.getItem('bookList') === null)) {
     bookList = [];
   }
   else {
@@ -22,7 +22,7 @@ function addBook(book) {
 
 function removeBook(title, author) {
   const bookList = getBooks();
-  const newList=bookList.filter(item => item.title !== title && item.author !== author);
+  const newList = bookList.filter(item => item.title !== title && item.author !== author);
   localStorage.setItem('bookList',JSON.stringify(newList));
 }
 
