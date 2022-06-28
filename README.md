@@ -18,9 +18,9 @@
 
 👤 **Author1**
 
-- GitHub: [@Fadahunsi](https://github.com/Fadahunsi)
-- Twitter: [@Fadahunsi](https://twitter.com/Fadahunsi)
-- LinkedIn: [Fadahunsi](https://linkedin.com/in/Fadahunsi)
+- GitHub: [@Fadahunsi](https://github.com/Fadahunsiseyi)
+- Twitter: [@Fadahunsi](https://twitter.com/@Fadahunsiseyi_)
+- LinkedIn: [Fadahunsi](https://www.linkedin.com/in/fadahunsi-seyi-samuel-49191a209/)
 
 👤 **Author2**
 
