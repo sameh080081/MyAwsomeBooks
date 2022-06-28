@@ -26,23 +26,23 @@ function removeBook(title, author) {
   localStorage.setItem('bookList', JSON.stringify(newList));
 }
 
+function showBook(book) {
+    const list = document.querySelector('.list');
+    const bookrecord = document.createElement('tr');
+    bookrecord.innerHTML = `
+    <td>${book.title}</td>
+    <td>&nbsp</td>
+    <td>${book.author}</td>
+    <button class= 'delete' >Remove</button>
+    `;
+    list.appendChild(bookrecord);
+  }
+
 function displayBooks() {
   const books = getBooks();
   books.forEach((book) => {
     showBook(book);
   });
-}
-
-function showBook(book) {
-  const list = document.querySelector('.list');
-  const bookrecord = document.createElement('tr');
-  bookrecord.innerHTML = `
-  <td>${book.title}</td>
-  <td>&nbsp</td>
-  <td>${book.author}</td>
-  <button class= 'delete' >Remove</button>
-  `;
-  list.appendChild(bookrecord);
 }
 
 function screenDelete(element) {
@@ -65,7 +65,8 @@ form.addEventListener('submit', (e) => {
 const remove = document.querySelector('.list');
 remove.addEventListener('click', (e) => {
   const author = e.target.previousElementSibling.innerText;
-  const title = e.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+  const title = e.target.previousElementSibling.
+  previousElementSibling.previousElementSibling.innerText;
   screenDelete(e.target);
-  removeBook(title,author);
+  removeBook(title, author);
 });
