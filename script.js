@@ -7,8 +7,7 @@ function getBooks() {
   let bookList;
   if (JSON.parse(localStorage.getItem('bookList') === null)) {
     bookList = [];
-  }
-  else {
+  } else {
     bookList = JSON.parse(localStorage.getItem('bookList'));
   }
   return bookList;
@@ -65,8 +64,8 @@ form.addEventListener('submit', (e) => {
 const remove = document.querySelector('.list');
 remove.addEventListener('click', (e) => {
   const author = e.target.previousElementSibling.innerText;
-  const title = e.target.previousElementSibling.
-  previousElementSibling.previousElementSibling.innerText;
+  const title = e.target.previousElementSibling
+    .previousElementSibling.previousElementSibling.innerText;
   screenDelete(e.target);
   removeBook(title, author);
 });
