@@ -17,13 +17,13 @@ function getBooks() {
 function addBook(book) {
   const bookList = getBooks();
   bookList.push(book);
-  localStorage.setItem('bookList',JSON.stringify(bookList));
+  localStorage.setItem('bookList', JSON.stringify(bookList));
 }
 
 function removeBook(title, author) {
   const bookList = getBooks();
-  const newList = bookList.filter(item => item.title !== title && item.author !== author);
-  localStorage.setItem('bookList',JSON.stringify(newList));
+  const newList = bookList.filter((item) => item.title !== title && item.author !== author);
+  localStorage.setItem('bookList', JSON.stringify(newList));
 }
 
 function displayBooks() {
@@ -63,7 +63,7 @@ form.addEventListener('submit', (e) => {
 });
 
 const remove = document.querySelector('.list');
-remove.addEventListener('click',(e) => {
+remove.addEventListener('click', (e) => {
   const author = e.target.previousElementSibling.innerText;
   const title = e.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
   screenDelete(e.target);
