@@ -1,32 +1,30 @@
-function Books(title, author){
+function Books(title, author) {
   this.title = title;
   this.author = author;
 }
 
-function getBooks(){
+function getBooks() {
   let bookList;
-  if(JSON.parse(localStorage.getItem('bookList')===null)){
+  if(JSON.parse(localStorage.getItem('bookList')===null)) {
     bookList = [];
   }
   else {
     bookList = JSON.parse(localStorage.getItem('bookList'));
   }
-   return bookList;
+  return bookList;
 }
 
-function addBook(book){
+function addBook(book) {
   const bookList = getBooks();
   bookList.push(book);
   localStorage.setItem('bookList',JSON.stringify(bookList));
 }
 
-function removeBook(title, author){
+function removeBook(title, author) {
   const bookList = getBooks();
   const newList=bookList.filter(item => item.title !== title && item.author !== author);
   localStorage.setItem('bookList',JSON.stringify(newList));
 }
-
-
 
 function displayBooks() {
   const books = getBooks();
@@ -35,7 +33,7 @@ function displayBooks() {
   });
 }
 
-function showBook(book){
+function showBook(book) {
   const list = document.querySelector('.list');
   const bookrecord = document.createElement('tr');
   bookrecord.innerHTML = `
@@ -47,7 +45,7 @@ function showBook(book){
   list.appendChild(bookrecord);
 }
 
-function screenDelete(element){
+function screenDelete(element) {
   element.parentElement.remove();
 }
 
