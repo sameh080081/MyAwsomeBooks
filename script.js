@@ -5,22 +5,22 @@ const allBooks = document.querySelector('.book-above');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
 
 const displayBook = () => {
-    allBooks.innerHTML = '';
-    storage.forEach((book) => {
-      const bookAbove = document.createElement('div');
-      bookAbove.classList.add('class-book');
-      const bookAboveText = document.createElement('p');
-      bookAboveText.textContent = `${book.title} by ${book.author}`;
-      const bookAboveBtn = document.createElement('button');
-      bookAboveBtn.textContent = 'Remove';
-      bookAboveBtn.classList.add('remove');
-      bookAboveBtn.setAttribute('id', book.id);
-      bookAbove.append(bookAboveText);
-      bookAbove.append(bookAboveBtn);
-      allBooks.append(bookAbove);
-    })
-  };
-  displayBook();
+  allBooks.innerHTML = '';
+  storage.forEach((book) => {
+    const bookAbove = document.createElement('div');
+    bookAbove.classList.add('class-book');
+    const bookAboveText = document.createElement('p');
+    bookAboveText.textContent = `${book.title} by ${book.author}`;
+    const bookAboveBtn = document.createElement('button');
+    bookAboveBtn.textContent = 'Remove';
+    bookAboveBtn.classList.add('remove');
+    bookAboveBtn.setAttribute('id', book.id);
+    bookAbove.append(bookAboveText);
+    bookAbove.append(bookAboveBtn);
+    allBooks.append(bookAbove);
+  });
+};
+displayBook();
 
 btn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -39,12 +39,12 @@ btn.addEventListener('click', (e) => {
 });
 
 const removeBookFromDisplay = (targetId) => {
-    const newArray = storage.filter((item) => item.id !== targetId);
-    storage.length = 0;
-    storage.push(...newArray);
-    localStorage.setItem('form', JSON.stringify(storage));
-    displayBook();
-  };
+  const newArray = storage.filter((item) => item.id !== targetId);
+  storage.length = 0;
+  storage.push(...newArray);
+  localStorage.setItem('form', JSON.stringify(storage));
+  displayBook();
+};
 
 allBooks.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
@@ -52,4 +52,3 @@ allBooks.addEventListener('click', (e) => {
     removeBookFromDisplay(targetId);
   }
 });
-
