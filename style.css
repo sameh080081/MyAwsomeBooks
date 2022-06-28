@@ -1,18 +1,18 @@
-.booksinput{
-    display: flex;
+.booksinput {
+  display: flex;
     flex-direction: column;
 }
 
 .title {
-    width: 150px;
-    margin-bottom: 10px;
+  width: 150px;
+  margin-bottom: 10px;
 }
 
 .author {
-    width: 150px;
-    margin-bottom: 10px;
+  width: 150px;
+  margin-bottom: 10px;
 }
 
 .add {
-    width: 50px;
+  width: 50px;
 }
