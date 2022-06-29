@@ -19,7 +19,7 @@ class Interface {
             const bookAbove = document.createElement('div');
                 bookAbove.classList.add('class-book');
                 const bookAboveText = document.createElement('p');
-                bookAboveText.textContent = `${book.title} by ${book.author}`;
+                bookAboveText.textContent = `"${book.title}" by ${book.author}`;
                 const bookAboveBtn = document.createElement('button');
                 bookAboveBtn.textContent = 'Remove';
                 bookAboveBtn.classList.add('remove');

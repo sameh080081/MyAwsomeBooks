@@ -7,25 +7,29 @@ body {
 
 .book-above {
   width: 50%;
-  /* display: flex; */
-  /* background-color: aqua; */
+  border: 5px solid #000;
 }
 
 .class-book{
-  background-color: red;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+}
+
+.class-book:nth-child(odd) {
+  background-color: #aeaeae !important;
 }
 
 .booksinput {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
-  background-color: green;
+}
+
+input[type="text"] {
+  padding: 10px;
 }
 
 .title {
@@ -41,15 +45,14 @@ body {
 }
 
 .add {
-  /* width: 50px; */
   align-self: flex-end;
   box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
+  cursor: pointer;
 }
 
 .remove {
   width: 70px;
-  height: 20px;
+  height: 30px;
   box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
-  /* align-self: flex-end; */
-  /* justify-self: center; */
+  cursor: pointer;
 }
