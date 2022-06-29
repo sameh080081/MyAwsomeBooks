@@ -29,13 +29,12 @@ class Interface {
   }
 
   static removeBook(targetId) {
-    const newBookList = storage.filter(book => book.id !== targetId);
+    const newBookList = storage.filter((book) => book.id !== targetId);
     storage.length = 0;
     storage.push(...newBookList);
-    localStorage.setItem('form', JSON.stringify(storage))
+    localStorage.setItem('form', JSON.stringify(storage));
     Interface.displayBook();
   }
-  
   static appendBook(theBook) {
     storage.push(theBook);
     localStorage.setItem('form', JSON.stringify(storage));
@@ -43,20 +42,18 @@ class Interface {
   }
 }
 
-document.addEventListener('DOMContentLoaded',Interface.displayBook());
+document.addEventListener('DOMContentLoaded', Interface.displayBook());
 
 btn.addEventListener('click', (e) => {
   e.preventDefault();
-  console.log('first');
-  if(title.value && author.value) {
-    const bookObj = new Book(title.value, author.value, Date.now())
-    console.log(bookObj);
+  if (title.value && author.value) {
+    const bookObj = new Book(title.value, author.value, Date.now());
     Interface.appendBook(bookObj);
     Interface.displayBook();
     title.value = '';
     author.value = '';
   }
-})
+});
 
 allBooks.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
@@ -64,4 +61,3 @@ allBooks.addEventListener('click', (e) => {
     Interface.removeBook(Id);
   }
 });
-

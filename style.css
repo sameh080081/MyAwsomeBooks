@@ -10,7 +10,7 @@ body {
   border: 5px solid #000;
 }
 
-.class-book{
+.class-book {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,13 +46,13 @@ input[type="text"] {
 
 .add {
   align-self: flex-end;
-  box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 1);
   cursor: pointer;
 }
 
 .remove {
   width: 70px;
   height: 30px;
-  box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 1);
   cursor: pointer;
 }
