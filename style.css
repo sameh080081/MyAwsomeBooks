@@ -1,20 +1,38 @@
-.booksinput {
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #094CFA;
+}
+
+.booksinput {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-  width: 150px;
+  width: 200px;
   margin-bottom: 10px;
+  border-radius: 3px;
 }
 
 .author {
-  width: 150px;
+  width: 200px;
   margin-bottom: 10px;
+  border-radius: 2px;
 }
 
 .add {
   width: 50px;
+  align-self: flex-end;
+  box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
+}
+
+.remove {
+  box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
 }
