@@ -2,9 +2,7 @@ const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const btn = document.querySelector('.btn');
 const allBooks = document.querySelector('.book-above');
-// const storage = JSON.parse(localStorage.getItem('form')) || [];
-
-
+const storage = JSON.parse(localStorage.getItem('form')) || [];
 
 class Book {
     constructor(title, author) {
@@ -12,10 +10,12 @@ class Book {
         this.author = author;
         this.id = Date.now();
     }
-    storage = JSON.parse(localStorage.getItem('form')) || [];
-    displayBook() {
+}
+
+class Interface {
+    static displayBook() {
         allBooks.innerHTML = ``
-        this.storage.forEach(book => {
+            storage.forEach(book => {
             const bookAbove = document.createElement('div');
                 bookAbove.classList.add('class-book');
                 const bookAboveText = document.createElement('p');
@@ -29,24 +29,21 @@ class Book {
                 allBooks.append(bookAbove);
         })
     }
-    removeBook(targetId) {
-        const newBookList = this.storage.filter(book => book.id !== targetId);
-        this.storage.length = 0
-        this.storage.push(...newBookList)
-        localStorage.setItem('form', JSON.stringify(this.storage))
-        this.displayBook()
+    static removeBook(targetId) {
+        const newBookList = storage.filter(book => book.id !== targetId);
+        storage.length = 0;
+        storage.push(...newBookList);
+        localStorage.setItem('form', JSON.stringify(storage))
+        Interface.displayBook();
     }
-    appendBook() {
-        this.storage = JSON.parse(localStorage.getItem('form')) || []
-        const theBook = {
-            title: this.title,
-            author: this.author,
-            id: this.id,
-        }
-        this.storage.push(theBook)
-        localStorage.setItem('form', JSON.stringify(this.storage))
+    static appendBook(theBook) {
+        storage.push(theBook)
+        localStorage.setItem('form', JSON.stringify(storage));
+        Interface.displayBook();
     }
 }
+
+document.addEventListener('DOMContentLoaded',Interface.displayBook());
 
 btn.addEventListener('click', (e) => {
     e.preventDefault()
@@ -54,21 +51,18 @@ btn.addEventListener('click', (e) => {
     if(title.value && author.value) {
         const bookObj = new Book(title.value, author.value, Date.now())
         console.log(bookObj)
-        bookObj.appendBook()
-        bookObj.displayBook()
+        Interface.appendBook(bookObj);
+        Interface.displayBook();
         title.value = ''
         author.value = ''
-        
-        // displayBook()
+
     }
 })
 
 allBooks.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
     const Id = parseInt(e.target.getAttribute('id'), 10);
-    // removeBook(targetId);
-    const removedBook = new Book();
-    removedBook.removeBook(Id)
+    Interface.removeBook(Id)
   }
 });
 
