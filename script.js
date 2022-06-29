@@ -4,12 +4,10 @@ const btn = document.querySelector('.btn');
 const allBooks = document.querySelector('.book-above');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
 
-class Book {
-    constructor(title, author) {
-        this.title = title;
-        this.author = author;
-        this.id = Date.now();
-    }
+function Book (title, author) {
+  this.title = title;
+  this.author = author;
+  this.id = Date.now();
 }
 
 class Interface {
