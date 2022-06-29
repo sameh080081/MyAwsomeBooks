@@ -5,14 +5,27 @@ body {
   align-items: center;
 }
 
-hr {
-	border: 0;
-	border-top: 1px solid #094CFA;
+.book-above {
+  width: 50%;
+  /* display: flex; */
+  /* background-color: aqua; */
+}
+
+.class-book{
+  background-color: red;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .booksinput {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-color: green;
 }
 
 .title {
@@ -28,11 +41,15 @@ hr {
 }
 
 .add {
-  width: 50px;
+  /* width: 50px; */
   align-self: flex-end;
   box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
 }
 
 .remove {
+  width: 70px;
+  height: 20px;
   box-shadow: 4px 4px 2px 1px rgba(0,0,0,1);
+  /* align-self: flex-end; */
+  /* justify-self: center; */
 }

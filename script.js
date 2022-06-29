@@ -26,6 +26,7 @@ class Interface {
                 bookAboveBtn.setAttribute('id', book.id);
                 bookAbove.append(bookAboveText);
                 bookAbove.append(bookAboveBtn);
+                bookAbove.style.display = 'flex';
                 allBooks.append(bookAbove);
         })
     }
