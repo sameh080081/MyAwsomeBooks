@@ -35,6 +35,7 @@ class Interface {
     localStorage.setItem('form', JSON.stringify(storage));
     Interface.displayBook();
   }
+
   static appendBook(theBook) {
     storage.push(theBook);
     localStorage.setItem('form', JSON.stringify(storage));
