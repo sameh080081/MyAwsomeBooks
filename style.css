@@ -14,8 +14,10 @@ header {
   border-radius: 5px;
 }
 
-#time {
+.time {
   align-self: flex-end;
+  margin-right: 20px;
+  padding-right: 10px;
 }
 
 p {

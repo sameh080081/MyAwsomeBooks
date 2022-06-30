@@ -2,7 +2,8 @@
 
 [](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This is a simple Book List app Project.
+> This is a simple Book List app Project. Awesome books is an online book store. It's built with HTML, CSS and mostly JS based on a medium-fidelity wireframe given by Microverse. Adding and removing books from the DOM is made in JavaScript functionality. Also, the books are stored in the local storage so they are retreived when the page reloads.
+
 
 ## Built With
 
