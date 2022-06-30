@@ -50,14 +50,14 @@ class Interface {
     Interface.displayBook();
   }
 
-  static display_time() {
-    let x = new Date();
+  static displayTime() {
+    const x = new Date();
     document.getElementById('time').innerHTML = x;
   }
 }
 
-document.addEventListener('DOMContentLoaded', Interface.displayBook(), Interface.display_time());
-setInterval(Interface.display_time, 1000);
+document.addEventListener('DOMContentLoaded', Interface.displayBook(), Interface.displayTime());
+setInterval(Interface.displayTime, 1000);
 
 btn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -77,7 +77,7 @@ allBooks.addEventListener('click', (e) => {
   }
 });
 
-navList.addEventListener('click', (e) => {
+navList.addEventListener('click', () => {
   Books.classList.remove('hide');
   Books.classList.add('show');
   inputs.classList.remove('show');
@@ -86,7 +86,7 @@ navList.addEventListener('click', (e) => {
   contact.classList.add('hide');
 });
 
-navAdd.addEventListener('click', (e) => {
+navAdd.addEventListener('click', () => {
   Books.classList.remove('show');
   Books.classList.add('hide');
   inputs.classList.remove('hide');
@@ -95,7 +95,7 @@ navAdd.addEventListener('click', (e) => {
   contact.classList.add('hide');
 });
 
-navContact.addEventListener('click', (e) => {
+navContact.addEventListener('click', () => {
   Books.classList.remove('show');
   Books.classList.add('hide');
   inputs.classList.remove('show');
