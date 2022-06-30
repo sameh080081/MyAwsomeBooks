@@ -43,18 +43,13 @@ class Interface {
     Interface.displayBook();
   }
 
-  static display_c() {
-    setTimeout(Interface.display_ct(),1000);
-  }
-
-  static display_ct() {
+  static display_time() {
     var x = new Date()
     document.getElementById('time').innerHTML = x;
-    Interface.display_c();
   }
 }
 
-document.addEventListener('DOMContentLoaded', Interface.displayBook(), Interface.display_ct());
+document.addEventListener('DOMContentLoaded', Interface.displayBook(), Interface.display_time());
 
 btn.addEventListener('click', (e) => {
   e.preventDefault();
