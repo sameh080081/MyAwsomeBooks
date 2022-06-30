@@ -1,21 +1,64 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.book-above {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  border: solid 2px;
+  border-radius: 5px;
+}
+
+.time {
+  align-self: flex-end;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+
+p {
+  font-size: 25px;
+  margin: 5px;
+}
+
+.links {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 50%;
-  border: 5px solid #000;
+}
+
+a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.book-above {
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+.book {
+  width: 50%;
 }
 
 .class-book {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 10px;
+}
+
+.class-book p {
+  font-size: 20px;
 }
 
 .class-book:nth-child(odd) {
@@ -32,14 +75,24 @@ input[type="text"] {
   padding: 10px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
 .title {
-  width: 200px;
+  width: 400px;
   margin-bottom: 10px;
   border-radius: 3px;
 }
 
 .author {
-  width: 200px;
+  width: 400px;
   margin-bottom: 10px;
   border-radius: 2px;
 }
@@ -55,4 +108,36 @@ input[type="text"] {
   height: 30px;
   box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 1);
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  border: solid 2px;
+  border-radius: 5px;
+  position: absolute;
+  top: 90%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+h3 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

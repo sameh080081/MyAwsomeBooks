@@ -5,18 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Link rel="stylesheet" href="style.css">
-    <title>Awesome Books</title>
+    <title>Book store</title>
 </head>
 <body>
+    <header>
+        <p>Awesome Books</p>
+        <div class="links">
+        <a href="#" class="nav-list">List</a>
+        <a href="#" class="nav-add">Add new</a>
+        <a href="#" class="nav-contact">Contact</a>
+    </div>
+    </header>
+    <span id='time' class="time" ></span>
+    <div class="book show">
     <h1>All awesome books</h1>
-    <div class="list book-above"></div>
+    <div class="book-above"></div>
+    </div>
+    <div class="entry hide booksinput">
     <h2>Add a new book</h2>
     <form class="booksinput" method="post">
         <input class="title" type="text" placeholder="Title" required>
         <input class="author" type="text" placeholder="Author" required>
         <button class="add btn" type="submit">Add</button>
     </form>
-
+    </div>
+    <div class="contact hide">
+        <h3>Contact information</h3>
+        <p>Do you have any question or just want to say hello?</p>
+        <p>You can reach out to us!</p>
+        <hr>
+        <p>. Our email ourEmail@gmail.com.</p>
+        <p>. Our phone 0096893533797.</p>
+        <p>. Our address oman-muscat-main road.</p>
+    </div>
+    <footer>
+        <p> &copy; Copyright FADAHUNSI & SAMEH 2022</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
