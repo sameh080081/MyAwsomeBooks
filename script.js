@@ -4,14 +4,13 @@ const btn = document.querySelector('.btn');
 const allBooks = document.querySelector('.book-above');
 
 const Books = document.querySelector('.book');
-const inputs = document.querySelector('.entry')
+const inputs = document.querySelector('.entry');
 const contact = document.querySelector('.contact');
 
 const navList = document.querySelector('.nav-list');
 const navAdd = document.querySelector('.nav-add');
-const navContact = document.querySelector('.nav-contact')
+const navContact = document.querySelector('.nav-contact');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
-const timeDate = document.querySelector('.time');
 
 function Book(title, author) {
   this.title = title;
@@ -52,7 +51,7 @@ class Interface {
   }
 
   static display_time() {
-    var x = new Date()
+    let x = new Date();
     document.getElementById('time').innerHTML = x;
   }
 }
@@ -78,7 +77,7 @@ allBooks.addEventListener('click', (e) => {
   }
 });
 
-navList.addEventListener('click',(e)  => {
+navList.addEventListener('click', (e) => {
   Books.classList.remove('hide');
   Books.classList.add('show');
   inputs.classList.remove('show');
@@ -87,7 +86,7 @@ navList.addEventListener('click',(e)  => {
   contact.classList.add('hide');
 });
 
-navAdd.addEventListener('click',(e)  => {
+navAdd.addEventListener('click', (e) => {
   Books.classList.remove('show');
   Books.classList.add('hide');
   inputs.classList.remove('hide');
@@ -96,7 +95,7 @@ navAdd.addEventListener('click',(e)  => {
   contact.classList.add('hide');
 });
 
-navContact.addEventListener('click',(e)  => {
+navContact.addEventListener('click', (e) => {
   Books.classList.remove('show');
   Books.classList.add('hide');
   inputs.classList.remove('show');
