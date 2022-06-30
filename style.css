@@ -27,7 +27,7 @@ p {
   display: flex !important;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: 1;
+  flex-wrap: wrap;
   width: 50%;
 }
 
@@ -49,7 +49,7 @@ a {
 .class-book {
   display: flex;
   flex-direction: row;
-  flex-wrap: 1;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
