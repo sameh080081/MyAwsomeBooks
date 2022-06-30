@@ -3,7 +3,7 @@ const author = document.querySelector('.author');
 const btn = document.querySelector('.btn');
 const allBooks = document.querySelector('.book-above');
 
-const Books = document.querySelector('.book');
+const book = document.querySelector('.book');
 const inputs = document.querySelector('.entry');
 const contact = document.querySelector('.contact');
 
@@ -12,7 +12,7 @@ const navAdd = document.querySelector('.nav-add');
 const navContact = document.querySelector('.nav-contact');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
 
-function Book(title, author) {
+function Books(title, author) {
   this.title = title;
   this.author = author;
   this.id = Date.now();
@@ -62,7 +62,7 @@ setInterval(Interface.displayTime, 1000);
 btn.addEventListener('click', (e) => {
   e.preventDefault();
   if (title.value && author.value) {
-    const bookObj = new Book(title.value, author.value, Date.now());
+    const bookObj = new Books(title.value, author.value, Date.now());
     Interface.appendBook(bookObj);
     Interface.displayBook();
     title.value = '';
@@ -78,8 +78,8 @@ allBooks.addEventListener('click', (e) => {
 });
 
 navList.addEventListener('click', () => {
-  Books.classList.remove('hide');
-  Books.classList.add('show');
+  book.classList.remove('hide');
+  book.classList.add('show');
   inputs.classList.remove('show');
   inputs.classList.add('hide');
   contact.classList.remove('show');
@@ -87,8 +87,8 @@ navList.addEventListener('click', () => {
 });
 
 navAdd.addEventListener('click', () => {
-  Books.classList.remove('show');
-  Books.classList.add('hide');
+  book.classList.remove('show');
+  book.classList.add('hide');
   inputs.classList.remove('hide');
   inputs.classList.add('show');
   contact.classList.remove('show');
@@ -96,8 +96,8 @@ navAdd.addEventListener('click', () => {
 });
 
 navContact.addEventListener('click', () => {
-  Books.classList.remove('show');
-  Books.classList.add('hide');
+  book.classList.remove('show');
+  book.classList.add('hide');
   inputs.classList.remove('show');
   inputs.classList.add('hide');
   contact.classList.remove('hide');
