@@ -2,6 +2,7 @@ const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const btn = document.querySelector('.btn');
 const allBooks = document.querySelector('.book-above');
+const timeDate = document.querySelector('.time');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
 
 function Book(title, author) {
@@ -41,9 +42,19 @@ class Interface {
     localStorage.setItem('form', JSON.stringify(storage));
     Interface.displayBook();
   }
+
+  static display_c() {
+    setTimeout(Interface.display_ct(),1000);
+  }
+
+  static display_ct() {
+    var x = new Date()
+    document.getElementById('time').innerHTML = x;
+    Interface.display_c();
+  }
 }
 
-document.addEventListener('DOMContentLoaded', Interface.displayBook());
+document.addEventListener('DOMContentLoaded', Interface.displayBook(), Interface.display_ct());
 
 btn.addEventListener('click', (e) => {
   e.preventDefault();

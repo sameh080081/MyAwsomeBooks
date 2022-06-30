@@ -1,13 +1,46 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  border: solid 2px;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-right: 30px;
+}
+
+a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.line {
+  height: 80%;
+  border-left: 4px solid rgb(0, 0, 0);
 }
 
 .book-above {
   width: 50%;
-  border: 5px solid #000;
+  border: 2px solid #000;
+  border-radius: 6px;
 }
 
 .class-book {
@@ -55,4 +88,13 @@ input[type="text"] {
   height: 30px;
   box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 1);
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  border: solid 2px;
+  border-radius: 5px;
 }
