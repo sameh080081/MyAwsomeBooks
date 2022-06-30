@@ -14,9 +14,14 @@ header {
   border-radius: 5px;
 }
 
+#time {
+  align-self: flex-end;
+}
+
 p {
   font-size: 25px;
   margin-left: 30px;
+  margin: 1px;
 }
 
 .links {
@@ -32,15 +37,13 @@ a {
   text-decoration: none;
 }
 
-.line {
-  height: 80%;
-  border-left: 4px solid rgb(0, 0, 0);
-}
-
 .book-above {
-  width: 50%;
   border: 2px solid #000;
   border-radius: 6px;
+}
+
+.book {
+  width: 50%;
 }
 
 .class-book {
@@ -65,14 +68,24 @@ input[type="text"] {
   padding: 10px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
 .title {
-  width: 200px;
+  width: 400px;
   margin-bottom: 10px;
   border-radius: 3px;
 }
 
 .author {
-  width: 200px;
+  width: 400px;
   margin-bottom: 10px;
   border-radius: 2px;
 }
@@ -97,4 +110,27 @@ footer {
   height: 50px;
   border: solid 2px;
   border-radius: 5px;
+  position: absolute;
+  top: 90%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+h3 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

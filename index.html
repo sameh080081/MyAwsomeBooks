@@ -11,21 +11,32 @@
     <header>
         <p>Awesome Books</p>
         <div class="links">
-        <a href="#">List</a>
-        <div class="line"></div>
-        <a href="#">Add new</a>
-        <div class="line"></div>
-        <a href="#">Contact</a></div>
+        <a href="#" class="nav-list">List</a>
+        <a href="#" class="nav-add">Add new</a>
+        <a href="#" class="nav-contact">Contact</a></div>
     </header>
     <span id='time' ></span>
+    <div class="book show">
     <h1>All awesome books</h1>
-    <div class="list book-above"></div>
+    <div class="book-above"></div>
+    </div>
+    <div class="entry hide booksinput">
     <h2>Add a new book</h2>
     <form class="booksinput" method="post">
         <input class="title" type="text" placeholder="Title" required>
         <input class="author" type="text" placeholder="Author" required>
         <button class="add btn" type="submit">Add</button>
     </form>
+    </div>
+    <div class="contact hide">
+        <h3>Contact information</h3>
+        <p>Do you have any question or just want to say hello?</p>
+        <p>You can reach out to us!</p>
+        <hr>
+        <p>. Our email ourEmail@gmail.com.</p>
+        <p>. Our phone 0096893533797.</p>
+        <p>. Our address oman-muscat-main road.</p>
+    </div>
     <footer>
         <p>Copyright</p>
     </footer>
