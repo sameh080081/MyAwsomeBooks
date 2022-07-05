@@ -18,7 +18,7 @@ export default class Interface {
       allBooks.append(bookAbove);
     });
   }
-  
+
   static removeBook(targetId) {
     const newBookList = storage.filter((book) => book.id !== targetId);
     storage.length = 0;
@@ -26,13 +26,13 @@ export default class Interface {
     localStorage.setItem('form', JSON.stringify(storage));
     Interface.displayBook();
   }
-  
+
   static appendBook(theBook) {
     storage.push(theBook);
     localStorage.setItem('form', JSON.stringify(storage));
     Interface.displayBook();
   }
-  
+
   static displayTime() {
     const x = new Date();
     document.getElementById('time').innerHTML = x;
