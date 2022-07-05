@@ -1,5 +1,6 @@
 const allBooks = document.querySelector('.book-above');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
+import { DateTime } from "./luxon.js";
 
 export default class Interface {
   static displayBook() {
@@ -34,7 +35,6 @@ export default class Interface {
   }
 
   static displayTime() {
-    const x = new Date();
-    document.getElementById('time').innerHTML = x;
+    document.getElementById('time').innerHTML = DateTime.local();
   }
 }
