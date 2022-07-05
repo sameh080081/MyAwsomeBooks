@@ -12,11 +12,11 @@ const navAdd = document.querySelector('.nav-add');
 const navContact = document.querySelector('.nav-contact');
 const storage = JSON.parse(localStorage.getItem('form')) || [];
 
-function Books(title, author) {
-  this.title = title;
-  this.author = author;
-  this.id = Date.now();
-}
+// function Books(title, author) {
+//   this.title = title;
+//   this.author = author;
+//   this.id = Date.now();
+// }
 
 class Interface {
   static displayBook() {
