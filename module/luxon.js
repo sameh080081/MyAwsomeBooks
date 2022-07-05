@@ -3,62 +3,62 @@
 /**
  * @private
  */
- class LuxonError extends Error {}
+class LuxonError extends Error {}
 
- /**
-  * @private
-  */
- class InvalidDateTimeError extends LuxonError {
-   constructor(reason) {
-     super(`Invalid DateTime: ${reason.toMessage()}`);
-   }
- }
+/**
+ * @private
+ */
+class InvalidDateTimeError extends LuxonError {
+  constructor(reason) {
+    super(`Invalid DateTime: ${reason.toMessage()}`);
+  }
+}
  
- /**
-  * @private
-  */
- class InvalidIntervalError extends LuxonError {
-   constructor(reason) {
-     super(`Invalid Interval: ${reason.toMessage()}`);
-   }
- }
+/**
+ * @private
+ */
+class InvalidIntervalError extends LuxonError {
+  constructor(reason) {
+    super(`Invalid Interval: ${reason.toMessage()}`);
+  }
+}
  
- /**
-  * @private
-  */
- class InvalidDurationError extends LuxonError {
-   constructor(reason) {
-     super(`Invalid Duration: ${reason.toMessage()}`);
-   }
- }
+/**
+ * @private
+ */
+class InvalidDurationError extends LuxonError {
+  constructor(reason) {
+    super(`Invalid Duration: ${reason.toMessage()}`);
+  }
+}
  
- /**
-  * @private
-  */
- class ConflictingSpecificationError extends LuxonError {}
+/**
+ * @private
+ */
+class ConflictingSpecificationError extends LuxonError {}
  
- /**
-  * @private
-  */
- class InvalidUnitError extends LuxonError {
-   constructor(unit) {
-     super(`Invalid unit ${unit}`);
-   }
- }
+/**
+ * @private
+ */
+class InvalidUnitError extends LuxonError {
+  constructor(unit) {
+    super(`Invalid unit ${unit}`);
+  }
+}
  
- /**
-  * @private
-  */
- class InvalidArgumentError extends LuxonError {}
+/**
+ * @private
+ */
+class InvalidArgumentError extends LuxonError {}
  
- /**
-  * @private
-  */
- class ZoneIsAbstractError extends LuxonError {
-   constructor() {
-     super("Zone is an abstract class");
-   }
- }
+/**
+ * @private
+ */
+class ZoneIsAbstractError extends LuxonError {
+  constructor() {
+    super("Zone is an abstract class");
+  }
+}
  
  /**
   * @private
