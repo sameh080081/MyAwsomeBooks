@@ -1,5 +1,5 @@
-import Book from "./module/books.js";
-import Interface from "./module/interface.js";
+import Book from './module/books.js';
+import Interface from './module/interface.js';
 
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
